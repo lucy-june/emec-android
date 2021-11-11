@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/floor_tabs_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ScrollView
+                android:id="@+id/floor_tabs_scrollview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioGroup
+                    android:id="@+id/floor_tabs"
+                    android:layout_width="@dimen/category_tab_width"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/floor1"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="一楼" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/floor2"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="二楼" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/floor3"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="三楼" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/floor4"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="4楼" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/floor5"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="5楼" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/floor6"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="六楼" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    
+                </RadioGroup>
+            </ScrollView>
+        </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/floor_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/floor_tabs_container">
+
+          <ScrollView
+                android:id="@+id/category_details_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/floor_details_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    >
+
+                   <com.adc.huijin.category.MyListView
+                       android:id="@+id/sub_category_gridview"
+                       android:layout_width="fill_parent"
+                       android:layout_height="match_parent"
+                      
+                       android:gravity="center"
+                       android:numColumns="auto_fit"
+                        >
+                       
+                   </com.adc.huijin.category.MyListView>               
+                 </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout android:id="@id/common_title" android:layout_width="fill_parent" android:layout_height="45.0dip">
+        <ImageView android:background="@drawable/android_title_bg" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+        <TextView android:layout_gravity="center_vertical" android:id="@id/titleText" android:layout_width="wrap_content" android:layout_marginLeft="@dimen/pdn_left_right_space_width" android:singleLine="true" android:layout_centerVertical="true" style="@style/layout_title" />
+        <ImageView android:layout_width="wrap_content" android:layout_height="wrap_content" android:src="@drawable/pdn_deliver_line_share" android:layout_toLeftOf="@id/share_btn" android:layout_centerVertical="true" />
+        <TextView android:textSize="@dimen/pdn_txt_size_large" android:textColor="@color/white" android:gravity="center" android:id="@id/share_btn" android:background="@drawable/shopping_cart_delete_btn_selector" android:paddingLeft="15.0dip" android:layout_width="80.0dip" android:layout_height="fill_parent" android:text="分享" android:drawableLeft="@drawable/pdn_icon_share" android:layout_alignParentRight="true" />
+    </RelativeLayout>
+    <RelativeLayout android:id="@id/category_list_container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/common_title">
+        <ListView android:id="@id/category_main_list" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" />
+        <RelativeLayout android:id="@id/category_main_empty" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/category_main_list" android:layout_alignTop="@id/category_main_list" android:layout_alignRight="@id/category_main_list" android:layout_alignBottom="@id/category_main_list">
+            <include android:id="@id/main_loading_error_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/loading_error_tips" />
+        </RelativeLayout>
+        <ListView android:id="@id/category_sub_list" android:background="@color/white" android:paddingLeft="8.0dip" android:paddingRight="8.0dip" android:visibility="invisible" android:scrollbars="none" android:layout_width="fill_parent" android:layout_height="fill_parent" android:cacheColorHint="#00000000" />
+        <RelativeLayout android:id="@id/category_sub_empty" android:visibility="gone" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignLeft="@id/category_sub_list" android:layout_alignTop="@id/category_sub_list" android:layout_alignRight="@id/category_sub_list" android:layout_alignBottom="@id/category_sub_list">
+            <include android:id="@id/sublist_loading_error_tips" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_centerInParent="true" layout="@layout/loading_error_tips" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <View android:id="@id/category_top_stage" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/common_title" />
+</RelativeLayout>

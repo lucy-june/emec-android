@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    
+    <LinearLayout
+        android:id="@+id/id_title"
+        android:layout_width="fill_parent"
+        android:layout_height="45dip"
+        android:background="@drawable/android_title_bg" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dip"
+            android:text="@string/goodsdetail"
+            android:textColor="#ffffff"
+             android:textSize="@dimen/medium_text_size"  />
+    </LinearLayout>
+    
+    <ScrollView 
+        android:id="@+id/scrollview"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+        <LinearLayout 
+            android:id="@+id/panelall"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+	        <ImageView
+	        android:id="@+id/goodsimage"
+	        android:scaleType="centerInside"
+	        android:layout_width="fill_parent"
+	        android:layout_height="350dip"
+	        android:layout_alignParentLeft="true"
+	        android:layout_alignParentTop="true"
+	        android:layout_marginTop="10dp"
+	        android:layout_marginLeft="10dp"
+	        android:layout_marginRight="10dp"
+	        android:src="@drawable/catergory_mobile" />
+	        
+	        <RelativeLayout 
+	            android:id="@+id/panel1"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            >
+	        
+		        <TextView
+		            android:id="@+id/namelabel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentLeft="true"
+		        	android:layout_marginLeft="10dp"
+		        	android:text="@string/goodsname"
+		        	/>
+		        <TextView 
+		            android:id="@+id/goodsname"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		        	android:layout_marginRight="10dp"
+		        	android:layout_alignParentRight="true"
+		            />
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/panel2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            >
+	        
+		        <TextView
+		            android:id="@+id/pricelabel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		        	android:layout_marginLeft="10dp"
+		        	android:text="@string/goodsprice"
+		        	/>
+		        <TextView 
+		            android:id="@+id/goodsprice"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		        	android:layout_marginRight="10dp"
+		        	android:textColor="@color/red"
+		        	android:textSize="16sp"
+		            />
+	        </RelativeLayout>
+	        
+	        <LinearLayout 
+	            android:id="@+id/panel3"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="vertical"
+	            >
+	        
+		        <TextView
+		            android:id="@+id/infolabel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		        	android:layout_marginLeft="10dp"
+		        	android:text="@string/goodsdescription"
+		        	/>
+		        <TextView 
+		            android:id="@+id/goodsdescription"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		        	android:layout_marginRight="10dp"
+		        	android:layout_marginLeft="10dp"
+		        	android:textSize="12sp"
+		            />
+	        </LinearLayout>
+	        <RelativeLayout 
+	            android:id="@+id/numpanel"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            >
+	            <TextView 
+	                android:id="@+id/numlabel"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:text="@string/goodsnum"
+	                android:layout_marginLeft="10dp"/>
+	            <Button 
+	                android:id="@+id/goodsplus"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_alignParentRight="true"
+	                android:layout_marginRight="10dp"
+	                android:text="@string/goodsplus"/>
+	            <EditText 
+	                android:id="@+id/goodsnum"
+	                android:layout_width="50dip"
+	                android:layout_height="wrap_content"
+	                android:gravity="center"
+	                android:layout_toLeftOf="@id/goodsplus"/>
+	            <Button 
+	                android:id="@+id/goodsminus"
+	                android:layout_width="wrap_content"
+	                android:layout_height="wrap_content"
+	                android:layout_toLeftOf="@id/goodsnum"
+	                android:text="@string/goodsminus"/>
+	        </RelativeLayout>
+	        
+	        <RelativeLayout 
+	            android:id="@+id/panel2"
+	            android:layout_width="fill_parent"
+	            android:layout_height="wrap_content"
+	            android:orientation="horizontal"
+	            >
+	        
+		        <TextView
+		            android:id="@+id/moneylabel"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		        	android:layout_marginLeft="10dp"
+		        	android:text="@string/goodsmoney"
+		        	/>
+		        <TextView 
+		            android:id="@+id/goodsmoney"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_alignParentRight="true"
+		        	android:layout_marginRight="10dp"
+		        	android:textSize="16sp"
+		            />
+	        </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+    
+    
+    
+    
+    <LinearLayout
+        android:id="@+id/bottom_panel"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom ="true" >
+        
+        <Button
+            android:id="@+id/addtocart"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/addtocart"
+            />
+        <Button
+            android:id="@+id/buy"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_vertical"
+            android:text="@string/buy"
+            
+            />
+        
+    </LinearLayout>
+    
+
+</LinearLayout>

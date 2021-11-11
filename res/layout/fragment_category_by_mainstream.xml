@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <RelativeLayout
+            android:id="@+id/category_tabs_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" >
+
+            <ScrollView
+                android:id="@+id/category_tabs_scrollview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" >
+
+                <RadioGroup
+                    android:id="@+id/category_tabs"
+                    android:layout_width="@dimen/category_tab_width"
+                    android:layout_height="wrap_content" >
+
+                    <RadioButton
+                        android:id="@+id/inter_brands"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/inter_brands" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        android:checked="true"/>
+                    <RadioButton
+                        android:id="@+id/fasion_women_clothing"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/fasion_women_clothing" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/fasion_men_clothing"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/fasion_men_clothing" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/sprots_outdoor"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/sprots_outdoor" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/bags_handbags"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/bags_handbags" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/furniture_textile"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/furniture_textile" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/beauty_cosmetics"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/beauty_cosmetics" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+                    <RadioButton
+                        android:id="@+id/foods_drinks"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/category_tab_height"
+                        android:text="@string/foods_drinks" 
+                        android:background="@drawable/category_tabs_selector"
+                        android:button="@null"
+                        />
+
+                    
+
+                </RadioGroup>
+            </ScrollView>
+        </RelativeLayout>
+        <RelativeLayout
+        android:id="@+id/category_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" 
+        android:layout_toRightOf="@+id/category_tabs_container">
+
+          <ScrollView
+                android:id="@+id/category_details_scrollview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="vertical" >-->
+
+                <LinearLayout
+                    android:id="@+id/category_details_container"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    >
+
+                   <com.adc.huijin.category.MyListView
+                       android:id="@+id/sub_category_gridview"
+                       android:layout_width="fill_parent"
+                       android:layout_height="match_parent"
+                      
+                       android:gravity="center"
+                       android:numColumns="auto_fit"
+                        >
+                       
+                   </com.adc.huijin.category.MyListView>               
+                 </LinearLayout>
+            </ScrollView>
+        </RelativeLayout>
+    </RelativeLayout>

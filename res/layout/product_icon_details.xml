@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@*android:color/transparent" android:layout_width="wrap_content" android:layout_height="wrap_content"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <include layout="@layout/product_icon" />
+    <TextView android:textSize="@dimen/pdn_txt_size_middle" android:textColor="@color/pdn_gray" android:id="@id/txt_2" android:layout_width="fill_parent" android:layout_height="wrap_content" android:layout_marginLeft="10.0dip" android:layout_toRightOf="@id/product_icon" />
+</RelativeLayout>
